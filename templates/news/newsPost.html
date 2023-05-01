@@ -5,11 +5,14 @@
 {% block body %}
 
 <div class="container my-3">
+
 <div class="blog-post">
         <h2 class="blog-post-title">{{post.title}}</h2>
         <p class="blog-post-meta">{{post.timeStamp}} by <a href="#">{{post.author}}</a></p>
 
         <p>{{post.content}}</p>
+
+        <a href="{% url 'delete_post' post.sno %}" class="btn btn-danger">Delete Post</a>
         <hr>
       </div>
       </div>
